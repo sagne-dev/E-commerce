@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanxaw</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <style>
+        .product .icon {
+            overflow: hidden;
+        }
+
+        .product .icon img {
+            display: block;
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+    </style>
+        
 </head>
 
 <body>
@@ -18,6 +32,8 @@
             <a href="#contact">CONTACT</a>
         </nav>
     </header>
+    <div class="cart-bar" onclick="toggleCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></div>
+    <aside id="cartPanel"><h2>Your cart</h2><div id="cartItems">Your cart is empty.</div><div class="total">Total: $<span id="cartTotal">0.00</span></div><button onclick="checkout()">Proceed to checkout</button></aside>
     <img src="image/image2.jpg" alt="Store hero" class="hero">
     <main>
 
@@ -26,22 +42,24 @@
      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?
      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?</p>
      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?</p>
-     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda ab, iure quo tempore deserunt nulla quae veniam debitis nostrum porro, rerum ea optio accusamus dignissimos consectetur, eius totam ad?</p>
+    
 
 <br>
+<br>
+<br>
+
 
      <h1 id="product">PRODUCTS</h1>
+
+                 <div class="shop-grid">
+                     <article class="product"><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjT2qz47DyLPskoSqjP4e25XaTOFrR0T_2arr0RGE6EA&s=10"></div><h3>Fresh Mango</h3><span class="price">50</span><button class="add-btn" onclick="addToCart('Fresh Mango',50)">Add to cart</button></article>
+                     <article class="product"><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9CQiQTwDM0icaz7ZLMEj5drPCU_Q3UnLSdaROGKjSVg&s=10"></div><h3>Organic Apples</h3><span class="price">60</span><button class="add-btn" onclick="addToCart('Organic Apples',60)">Add to cart</button></article>
+                     <article class="product"><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY2ty1K4feGvGc-OGQvdFpT8tCPBHJLU1epS-A4BwLSQ&s=10"></div><h3>Green Cabbage</h3><span class="price">44</span><button class="add-btn" onclick="addToCart('Green Cabbage',44)">Add to cart</button></article>
+                     <article class="product"><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq_gE0KSjPPQ9-ucTIOnM7ZzVLI9Hx-_XWERQHYtnbHQ&s=10" alt="Red Tomatoes"></div><h3>Red Tomatoes</h3><span class="price">4</span><button class="add-btn" onclick="addToCart('Red Tomatoes',4)">Add to cart</button></article>
+                 </div>
+                 <br>
+<br>
+<br>
 
          <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 900px; margin: 0 auto; text-align: left;">
             <thead>
@@ -185,6 +203,7 @@
            <h3>address : addis ababa, ethiopia</h3> 
            
          
+       
     </body>
 
 </html>
