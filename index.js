@@ -43,7 +43,7 @@
                     alert('Your order is ready! Please complete the checkout form below.');
                 }
 
-                // Make functions available to HTML onclick handlers.
+         
                 window.addToCart = addToCart;
                 window.removeItem = removeItem;
                 window.toggleCart = toggleCart;
